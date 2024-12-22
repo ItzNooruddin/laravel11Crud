@@ -25,9 +25,10 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @php $i = 1 @endphp
                     @foreach ($posts as $post)
                         <tr>
-                            <td>{{ $post->id }}</td>
+                            <td>{{ $i }}</td>
                             <td>{{ $post->title }}</td>
                             <td>{{ $post->body }}</td>
                             <td>
@@ -40,6 +41,7 @@
                                 </form>
                             </td>
                         </tr>
+                        @php $i++ @endphp
                     @endforeach
                 </tbody>
             </table>

@@ -23,6 +23,9 @@ class PostController extends Controller
         $request->validate([
             "title" => "required",
             "body" => "required"
+        ], [
+            'title.required' => 'Please Enter Title!',
+            'body.required' => 'Please Enter Body!',
         ]);
         Post::create([
             "title" => $request->title,
@@ -48,6 +51,9 @@ class PostController extends Controller
         $request->validate([
             "title" => "required",
             "body" => "required"
+        ], [
+            'title.required' => 'Please Enter Title!',
+            'body.required' => 'Please Enter Body!',
         ]);
         // $post = Post::find($id);
         $post->title = $request->title;
