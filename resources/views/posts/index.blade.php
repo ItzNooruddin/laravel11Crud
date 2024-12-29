@@ -45,7 +45,7 @@
                     @endforeach
                 </tbody>
             </table>
-            {{ $posts->links() }}
+            {{ $posts->links('pagination::bootstrap-5') }}
         </div>
     </div>
 @endsection
